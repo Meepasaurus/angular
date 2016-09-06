@@ -1,0 +1,1 @@
+"use strict";var testApp=angular.module("testApp",[]);testApp.controller("MessageController",["$scope",function(e){e.message="Controller says Hello."}]);
