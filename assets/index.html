@@ -10,13 +10,13 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
 	<script src="index.js"></script>
 </head>
-<body ng-init="myArr=['hi', 'hello', 'hey']">
-	<input type="text" ng-model="myInput"/> 
-	<p>You typed: {{myInput}}</p>
+<body ng-controller="MessageController">
+	<input type="text" ng-model="search"/> 
+	<p>Filtered results:</p>
 	<ul>
-		<li ng-repeat="item in myArr">{{item}}</li>
+		<li ng-repeat="item in testArr | orderBy: item | filter: search | limitTo: 2">{{item}}</li>
 	</ul>
-	<div ng-controller="MessageController">
+	<div>
 		<p>{{message}}</p>
 	</div>
 </body>

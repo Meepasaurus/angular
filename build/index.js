@@ -1,1 +1,1 @@
-"use strict";var testApp=angular.module("testApp",[]);testApp.controller("MessageController",["$scope",function(e){e.message="Controller says Hello."}]);
+"use strict";var testApp=angular.module("testApp",[]);testApp.controller("MessageController",["$scope",function(e){e.message="Controller says Hello.",e.testArr=["John","Bill","Bob"]}]);
